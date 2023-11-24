@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "emulicious-debugger",
+            "request": "launch",
+            "name": "SMS",
+            "program": "${workspaceFolder}/build/sms/CPSGLib.sms", 
+            "additionalSrcFolders": "${workspaceFolder}/obj/sms;${workspaceFolder}/src",
+            "port": 58870,
+            "stopOnEntry": false,
+            "preLaunchTask": "MakeSMS"
+        },
+        {
+            "type": "emulicious-debugger",
+            "request": "launch",
+            "name": "GG",
+            "program": "${workspaceFolder}/build/gg/CPSGLib.gg", 
+            "additionalSrcFolders": "${workspaceFolder}/obj/gg;${workspaceFolder}/src",
+            "port": 58870,
+            "stopOnEntry": false,
+            "preLaunchTask": "MakeGG"
+        }
+    ]
+}

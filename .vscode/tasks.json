@@ -1,0 +1,41 @@
+{    
+    "tasks": 
+    [
+        {
+            "label": "MakeSMS",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "sms",
+                "DEBUG=1"
+            ],
+            "group":  {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal":"always",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "MakeGG",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "gg",
+                "DEBUG=1"
+            ],
+            "group":  {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal":"always",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "env": {
+        "commonIncludePath": [
+            "${env:GBDK_HOME}/include",
+            "${workspaceFolder}/include"
+        ]
+      },
+    "configurations": [
+        {
+            "name": "SMS",
+            "defines": [
+                "__TARGET_sms",
+                "__PORT_z80"
+            ], 
+            "includePath": [
+                "${commonIncludePath}",
+                "${workspaceFolder}/obj/sms"
+            ]
+        },
+        {
+            "name": "GG",
+            "defines": [
+                "__TARGET_gg",
+                "__PORT_z80"
+            ], 
+            "includePath": [
+                "${commonIncludePath}",
+                "${workspaceFolder}/obj/gg"
+            ]
+        }
+        
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}

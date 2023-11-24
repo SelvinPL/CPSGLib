@@ -1,0 +1,8 @@
+{
+    "C_Cpp.autoAddFileAssociations": false,
+	"files.exclude": {
+		"obj": true,
+		"build": true
+    },
+	"editor.tabSize": 4
+}
