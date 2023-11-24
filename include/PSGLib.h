@@ -12,6 +12,6 @@ extern uint8_t PSGLoopFlag; //the tune should loop or not (flag)
 extern void PSGInit(void);
 extern void PSGPlayNoRepeat(uint8_t* music) Z88DK_FASTCALL;
 extern void PSGPlay(uint8_t* music) Z88DK_FASTCALL;
-extern void PSGStop(void) Z88DK_FASTCALL;
+extern void PSGStop(void);
 extern void PSGCancelLoop(void);
 extern void PSGFrame(void);
