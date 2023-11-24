@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <gbdk/platform.h>
-#include <PSGLib.h>
+#include <PSGLib_minimal.h>
 
 extern const uint8_t SonicTheHedgehog[];
 extern const uint8_t AceofAces[];

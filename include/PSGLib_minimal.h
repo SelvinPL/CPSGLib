@@ -9,9 +9,9 @@ extern uint8_t* PSGMusicLoopPoint; //the pointer to the loop begin
 extern uint8_t PSGMusicSkipFrames; //the frames we need to skip
 extern uint8_t PSGLoopFlag; //the tune should loop or not (flag)
 
-extern void PSGInit(void);
-extern void PSGPlayNoRepeat(uint8_t* music) Z88DK_FASTCALL;
-extern void PSGPlay(uint8_t* music) Z88DK_FASTCALL;
-extern void PSGStop(void);
-extern void PSGCancelLoop(void);
-extern void PSGFrame(void);
+extern void PSGInit(void) PRESERVES_REGS(b, c, d, e, h, l, iyh, iyl);
+extern void PSGPlayNoRepeat(uint8_t* music) Z88DK_FASTCALL PRESERVES_REGS(b, c, d, e, h, l, iyh, iyl);
+extern void PSGPlay(uint8_t* music) Z88DK_FASTCALL PRESERVES_REGS(b, c, d, e, h, l, iyh, iyl);
+extern void PSGStop(void) PRESERVES_REGS(b, c, d, e, h, l, iyh, iyl);
+extern void PSGCancelLoop(void) PRESERVES_REGS(b, c, d, e, h, l, iyh, iyl);
+extern void PSGFrame(void) PRESERVES_REGS(d, e, iyh, iyl);

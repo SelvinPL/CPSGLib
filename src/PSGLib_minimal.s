@@ -9,8 +9,8 @@
 ;       If you want to change or remove that,
 ;       see the note at the end of this file
 
-.title			"PSGLib-minimal"
-.module			psglib-minimal
+.title			"PSGLib_minimal"
+.module			psglib_minimal
 .area			_CODE
 PSG_STOPPED         =0
 PSG_PLAYING         =1
@@ -54,10 +54,10 @@ _PSGInit::
 ; destroys AF
 _PSGPlayNoRepeat::
   xor a                           ; We don't want the song to loop
-  jp .skip$
+  jp .play$
 _PSGPlay::
   ld a,#1                         ; the song can loop when finished
-.skip$:
+.play$:
   ld (_PSGLoopFlag),a
   call _PSGStop                    ; if there's a tune already playing, we should stop it!
   ld (_PSGMusicStart),hl           ; store the begin point of music
@@ -136,7 +136,6 @@ _intLoop:
 
 _continue:
   ld a,b                         ; copy PSG byte into A
-101$:
   cp #PSGData                     ; is it a command (<$40)??
   jr c,102$                         ; it is not, output it!
   out (PSGDataPort),a
