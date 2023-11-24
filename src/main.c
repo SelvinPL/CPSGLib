@@ -16,6 +16,7 @@ void main(void)
 {
 	PSGInit();
 	playlistPosition = 255;
+	add_VBL(PSGFrame);
     DISPLAY_ON;
     while(1)
     {
@@ -25,7 +26,6 @@ void main(void)
 			PSGPlayNoRepeat(playlist[playlistPosition]);
 		}		
         vsync();
-		PSGFrame();
     }
 }
 
